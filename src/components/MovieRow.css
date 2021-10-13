@@ -1,67 +1,85 @@
-.movieRow{
-    margin-bottom: 30px;
+.movieRow {
+  overflow: hidden;
+  margin-bottom: 30px;
 }
-.movieRow h2{
-    /*margin: 0px 0px 0px 30px; */
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 30px;
-    margin-right: 0;
+.movieRow h2 {
+  margin: 0px 0px 0px 30px;
+  /* margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 30px;
+  margin-right: 0; */
 }
-.movieRow--listarea{
-    overflow-x: hidden;
-    padding-left: 30px;
+.movieRow--listarea {
+  padding-left: 30px;
+  overflow: hidden;
+  display: inline-flex;
+}
 
+.movieRow--list {
+  transition: all ease 0.5;
 }
-.movieRow--list{
-    width: 999999px;
+.movieRow--item {
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
 }
-.movieRow--item{
-    display: inline-block;
-    width: 150px;
-    cursor: pointer
-
+.movieRow--item img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.2s;
 }
-.movieRow--item img{
-    width: 100%;
-    transform: scale(0.9);
-    transition: all ease 0.2s;
-
+.movieRow--item img:hover {
+  transform: scale(1);
 }
-.movieRow--item img:hover{
-    transform: scale(1);
-}
-.featured--name{
-font-size: 60px;
-    font-weight: bold;
+.featured--name {
+  font-size: 60px;
+  font-weight: bold;
 }
 .featured--points,
-.featured--year{
-    display: inline-block;
-    margin-right: 15px;
-
+.featured--year {
+  display: inline-block;
+  margin-right: 15px;
 }
-    
 
-.featured--info{
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 15px;
-
+.featured--info {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
 }
-.featured--points{
-    color: #46d369;
-    
-
+.featured--points {
+  color: #46d369;
 }
-.featured--description{
-    margin-top: 15px;
-    font: 20px;
-    color: #999;
-    max-width: 40%;
-
+.featured--description {
+  margin-top: 15px;
+  font: 20px;
+  color: #999;
+  max-width: 40%;
 }
-.featured--button{
-    margin-top: 15px;
-    
+.featured--button {
+  margin-top: 15px;
+}
+.movieRow--left,
+.movieRow--right {
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.9s;
+}
+.movieRow--left {
+  left: 0;
+}
+.movieRow--right {
+  right: 0;
+}
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right {
+  opacity: 1;
 }
